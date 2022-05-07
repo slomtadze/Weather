@@ -66,6 +66,10 @@ const searchHistoryDOM = (arr) => {
         searchHistoryCities[i].textContent = arr[i].toLocaleUpperCase()
     }
 }
+const getCurDate = () => {
+    const curDate = new Date;
+    return curDate.toString().slice(0,24)
+}
 
 const weatherCall = async (city) => {
     resetError()
@@ -74,7 +78,7 @@ const weatherCall = async (city) => {
         const result = await responce.json();
             temperatureDOM.textContent = `${Math.round(result.main.temp)}`
             cityDOM.textContent = result.name.toLocaleUpperCase();
-            timeDOM.textContent = new Date;
+            timeDOM.textContent = getCurDate();
             iconDOM.src = getIcon(result.weather[0].icon);
             iconStrDOM.textContent = result.weather[0].main;
             feelsLikeDOM.textContent = `${Math.round(result.main.feels_like)}`
