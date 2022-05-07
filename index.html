@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="weather-img">
+                
+            </div>
+            <div class="left-weather-information">
+                <div class="temperature">
+                    <h2>16</h2>
+                </div>
+                <div class="city-name">
+                    <h3>City</h3>
+                    <span>time</span>
+                </div>
+                <div class="weather-icon">
+                    <img class="icon-small" src="">
+                    <span>test</span>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <form class="input-box">
+                <input type="text" name="city" id="city" placeholder="Enter Location">
+                <input type="submit" value="Search" id="city-btn">
+            </form>
+            <div class="error">City not found</div>
+            <div class="search-history">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="weather-details-container">
+                <div class="weather-details-header">
+                    <h3>Weather Details</h3>
+                </div>
+                <div class="weather-details">
+                    <div class="feelslike-detail">
+                        <span>Feels Like</span>
+                        <h3>1</h3>
+                    </div>
+                    <div class="humidity-detail">
+                        <span>Humidity</span>
+                        <h3>2</h3>
+                    </div>
+                    <div class="wind-detail">
+                        <span>Wind</span>
+                        <h3>3</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
