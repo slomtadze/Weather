@@ -14,7 +14,7 @@ const feelsLikeDOM = document.querySelector('.feelslike-detail h3')
 const humidityDOM = document.querySelector('.humidity-detail h3')
 const windDOM = document.querySelector('.wind-detail h3')
 const weatherImgDiv = document.querySelector('.weather-img')
-const searchHistory = document.getElementById('search-history')
+const searchHistory = document.querySelector('.search-history')
 
 
 const resetError = () => {
@@ -38,13 +38,13 @@ const getIcon = (iconId) => {
 const weatherImgGenerate = (condition) => {
 
     if(condition.includes('Clear')){
-        weatherImgDiv.style.backgroundImage = "url('resources/sunny.jpg')"
+        weatherImgDiv.src = "resources/sunny.jpg"
     } else if(condition.includes('Cloud')){
-        weatherImgDiv.style.backgroundImage = "url('resources/cloudy.jpg')"
+        weatherImgDiv.src = "resources/cloudy.jpg"
     } else if(condition.includes('Rain')){
-        weatherImgDiv.style.backgroundImage = "url('resources/rainy.jpg')"
+        weatherImgDiv.src = "resources/rainy.jpg"
     } else if(condition.includes('Snow')){
-        weatherImgDiv.style.backgroundImage = "url('resources/snow.jpg')"
+        weatherImgDiv.src = "resources/snow.jpg"
   }
 }
 
@@ -94,6 +94,7 @@ const weatherCall = async (city) => {
         showError()
     }
 }
+const test = 
 
 weatherCall('kutaisi');
 

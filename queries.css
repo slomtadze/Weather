@@ -5,11 +5,45 @@
 
 }
 @media only screen and (max-width: 1023px){
- 
-}
-@media only screen and (max-width: 767px){
+    *{
+        font-size: 15px;
+    }
+    
     
 }
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 767px){
+    *{
+        font-size: 10px;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .left-side{
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+    }
+    .weather-img{
+        display: block;
+    }
+    .left-weather-information{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .right-side{
+        padding: 0px 25px;
+    }
+    
+    .search-history{
+        
+    }
 
+}
+@media only screen and (max-width: 480px){
+    .weather-img{
+        display: block;
+    }
 }
