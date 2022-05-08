@@ -114,7 +114,7 @@ body {
 #city{
     width: 80%;
 }
-.search-history,
+#search-history,
 .weather-details-container{
     border-top: 1px solid rgb(70, 66, 66);
     width: 100%;
@@ -124,7 +124,7 @@ body {
     justify-content: space-between;
     padding: 20px 0px;
 }
-.search-history p,
+#search-history p,
 .weather-details-container div{
     letter-spacing: 1px;
     margin-top: 15px;

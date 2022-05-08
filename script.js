@@ -14,7 +14,7 @@ const feelsLikeDOM = document.querySelector('.feelslike-detail h3')
 const humidityDOM = document.querySelector('.humidity-detail h3')
 const windDOM = document.querySelector('.wind-detail h3')
 const weatherImgDiv = document.querySelector('.weather-img')
-const searchHistoryCities = [...document.querySelectorAll('.search-history p')]
+const searchHistory = document.getElementById('search-history')
 
 
 const resetError = () => {
@@ -62,9 +62,11 @@ const createSearchHistory = (search) => {
 }
 
 const searchHistoryDOM = (arr) => {
-    for (let i=arr.length-1; i >= 0; i--){
-        searchHistoryCities[i].textContent = arr[i].toLocaleUpperCase()
-    }
+    searchHistory.innerHTML = '';
+    arr.forEach(el => {
+       const markUp = `<p>${el.toLocaleUpperCase()}</p>`; 
+       searchHistory.insertAdjacentHTML("afterbegin",markUp)
+    })
 }
 const getCurDate = () => {
     const curDate = new Date;
